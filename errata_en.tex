@@ -1,0 +1,209 @@
+C. Albert Thompson
+Home
+Papers
+Classes
+Tools
+FAQ
+Online Latex Formatter
+
+\documentclass[lang=en,11pt,numbers]{errata}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{makecell}
+
+\title{Visual SLAM: From Theory to Practice (Second Edition) \ Errata}
+\author{Gaoxiang}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Errata Explanation}
+Due to limitations in our abilities, there are inevitably some errors in the book content, for which we apologize. In this document, we list the errors in the book since the first printing (August 2019). Most of these errors should be corrected in the next printing. Therefore, readers should pay attention to the printing times on the title page and compare them with this document.
+
+For changes in the code, please refer to the current GitHub page; this errata is only for book content. This errata is only valid for the second edition of the book; for errata in the first edition, please refer to the corresponding GitHub page.
+
+As typesetting may have minor changes in different printings, the page and paragraph markings in the errata are only valid for the current printing.
+
+If you believe there are errors in the book content, please email me or send a message through the feedback channel provided by the publisher. Sending an email directly to me would be more convenient.
+
+\section{First Printing (August 2019)}
+\begin{table}[!htp]
+\centering
+\caption{Errata for the First Printing}
+\begin{tabular}{c|cccc}
+\hline\hline
+No. & Location & Before Correction & After Correction & Explanation \\hline
+1 & Caption of Color Plate 1 & Topological & Topological Map & Typo during editing \
+2 & Equation 3.41 & $
+\begin{aligned}
+\theta &= \arccos(\frac{\mathrm{tr}(\bm{R}-1)}{2}) \
+&=\arccos(2s^2-1).
+\end{aligned}$ & $
+\begin{aligned}
+\theta &= \arccos(\frac{\mathrm{tr}(\bm{R})-1}{2}) \
+&=\arccos(2s^2-1).
+\end{aligned}$ & Incorrect placement of parentheses \
+3 & Page 188 Terminal Input & d1.png d2.png & 1_depth.png 2_depth.png & Depth image file names \
+4 & Reference 61 & P3p(blog) $\ldots$ & Removed & Website expired, URL inaccessible \
+5 & Equation (12.14) Page 326 & $d_C {\bm{P}C} = \ldots .$ & Removed $\bm{K}$ before $\bm{t}{\mathrm{RW}}$ on the rightmost side & Extra $\bm{K}$ \
+6 & Page 156 & Pyramid is a computational graph in vision & Computer vision & Typo \
+\hline\hline
+\end{tabular}
+\end{table}
+
+\section{Third Printing (October 2019)}
+\begin{table}[!htp]
+\centering
+\caption{Errata for the Third Printing}
+\begin{tabular}{c|cccc}
+\hline\hline
+No. & Location & Before Correction & After Correction & Explanation \\hline
+7 & Page 265 Lecture 10 Objectives & Item 3 & Removed & IMU not introduced in the text (planned but not implemented) \
+\hline \hline
+\end{tabular}
+\end{table}
+
+\section{Fourth Printing (November 2019)}
+\begin{table}[!htp]
+\centering
+\caption{Errata for the Fourth Printing}
+\begin{tabular}{c|cccc}
+\hline\hline
+No. & Location & Before Correction & After Correction & Explanation \\hline
+8 & Page 178 & First two sentences under Equation (7.25) & \makecell[c]{The left side of this equation is zero,\ and the right side can be considered\ as an equation about $s_1$.\ We can directly solve for $s_1$.\ With $s_1$, $s_2$ can also be easily obtained.} & Corrected statement \
+\hline
+9 & Page 127 & Here $\bm{J}(\bm{x})^\mathrm{T}$ is the derivative of $F(\bm{x})$ with respect to $\bm{x}$ & Here $\bm{J}(\bm{x})$ is the derivative of $F(\bm{x})$ with respect to $\bm{x}$ & Removed transpose symbol \
+\hline \hline
+\end{tabular}
+\end{table}
+
+\section{Unsubmitted Corrections}
+Below are known issues that have not been submitted to the publisher.
+\begin{table}[!htp]
+\centering
+\caption{Unsubmitted Corrections}
+\begin{tabular}{c|cccc}
+\hline\hline
+No. & Location & Before Correction & After Correction & Explanation \\hline
+10 & Page 262 & Code snippet & Removed & Appears to be redundant with previous text, likely a version issue \
+\hline
+11 & Page 100 & (i.e., the depth from this point to the imaging plane) & The depth from this point to the camera center & More accurate terminology \ \hline
+12 & Page 100 & Footnote: If it bends inward,... If it bends outward & Reordered, with outward bending first & Misleading description \ \hline
+\hline \hline
+\end{tabular}
+\end{table}
+
+\section{Additional Changes Not Included in the Errata}
+In addition to the above corrections, there are some changes not included in the book text, which need to be explained to readers. Most of these errata come from GitHub issues. They have been fixed in the code, but the book text may lag behind the speed of updates on GitHub.
+
+\begin{enumerate}
+\item In the example of SE3 construction in Lecture 4, quaternion should be in the order of $w,x,y,z$.
+\item In the orb_self.cpp example in Lecture 7, line 375 should be changed to int idx_pq = i * 32 + k;
+\item In the orb_self.cpp example in Lecture 7, lines 360 and 361, m01 and m10 should be swapped.
+\item For the implementation of direct method in Lecture 8, cv::parallel_for_function supported by OpenCV 4 is required. If readers are using older versions, some modifications need to be made to the code. Please refer to the corresponding version of OpenCV documentation or refer to~\url{https://github.com/gaoxiang12/slambook2/issues/32}.
+\end{enumerate}
+
+\end{document}
+
+ 
+\documentclass[lang=en,11pt,numbers]{errata}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{makecell}
+
+\title{Visual SLAM: From Theory to Practice (Second Edition) \ Errata}
+\author{Gaoxiang}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Errata Explanation}
+Due to limitations in our abilities, there are inevitably some errors in the book content, for which we apologize. In this document, we list the errors in the book since the first printing (August 2019). Most of these errors should be corrected in the next printing. Therefore, readers should pay attention to the printing times on the title page and compare them with this document.
+
+For changes in the code, please refer to the current GitHub page; this errata is only for book content. This errata is only valid for the second edition of the book; for errata in the first edition, please refer to the corresponding GitHub page.
+
+As typesetting may have minor changes in different printings, the page and paragraph markings in the errata are only valid for the current printing.
+
+If you believe there are errors in the book content, please email me or send a message through the feedback channel provided by the publisher. Sending an email directly to me would be more convenient.
+
+\section{First Printing (August 2019)}
+\begin{table}[!htp]
+	\centering
+	\caption{Errata for the First Printing}
+	\begin{tabular}{c|cccc}
+		\hline\hline
+		No. & Location                  & Before Correction                          & After Correction                                                    & Explanation                         \\hline
+		1   & Caption of Color Plate 1  & Topological                                & Topological Map                                                     & Typo during editing \               
+		2 & Equation 3.41 & $
+		\begin{aligned}
+		\theta &= \arccos(\frac{\mathrm{tr}(\bm{R}-1)}{2}) \
+		&=\arccos(2s^2-1).
+		\end{aligned}$ & $
+		\begin{aligned}
+		\theta &= \arccos(\frac{\mathrm{tr}(\bm{R})-1}{2}) \
+		&=\arccos(2s^2-1).
+		\end{aligned}$ & Incorrect placement of parentheses \
+		3   & Page 188 Terminal Input   & d1.png d2.png                              & 1_depth.png 2_depth.png                                             & Depth image file names \            
+		4   & Reference 61              & P3p(blog) $\ldots$                         & Removed                                                             & Website expired, URL inaccessible \ 
+		5   & Equation (12.14) Page 326 & $d_C {\bm{P}C} = \ldots .$                 & Removed $\bm{K}$ before $\bm{t}{\mathrm{RW}}$ on the rightmost side & Extra $\bm{K}$ \                    
+		6   & Page 156                  & Pyramid is a computational graph in vision & Computer vision                                                     & Typo \                              
+		\hline\hline
+	\end{tabular}
+\end{table}
+
+\section{Third Printing (October 2019)}
+\begin{table}[!htp]
+	\centering
+	\caption{Errata for the Third Printing}
+	\begin{tabular}{c|cccc}
+		\hline\hline
+		No. & Location                       & Before Correction & After Correction & Explanation                                                    \\hline
+		7   & Page 265 Lecture 10 Objectives & Item 3            & Removed          & IMU not introduced in the text (planned but not implemented) \ 
+		\hline \hline
+	\end{tabular}
+\end{table}
+
+\section{Fourth Printing (November 2019)}
+\begin{table}[!htp]
+	\centering
+	\caption{Errata for the Fourth Printing}
+	\begin{tabular}{c|cccc}
+		\hline\hline
+		No. & Location & Before Correction                                                                          & After Correction                                                                                                                                                                                           & Explanation                \\hline
+		8   & Page 178 & First two sentences under Equation (7.25)                                                  & \makecell[c]{The left side of this equation is zero,\ and the right side can be considered\ as an equation about $s_1$.\ We can directly solve for $s_1$.\ With $s_1$, $s_2$ can also be easily obtained.} & Corrected statement \      
+		\hline
+		9   & Page 127 & Here $\bm{J}(\bm{x})^\mathrm{T}$ is the derivative of $F(\bm{x})$ with respect to $\bm{x}$ & Here $\bm{J}(\bm{x})$ is the derivative of $F(\bm{x})$ with respect to $\bm{x}$                                                                                                                            & Removed transpose symbol \ 
+		\hline \hline
+	\end{tabular}
+\end{table}
+
+\section{Unsubmitted Corrections}
+Below are known issues that have not been submitted to the publisher.
+\begin{table}[!htp]
+	\centering
+	\caption{Unsubmitted Corrections}
+	\begin{tabular}{c|cccc}
+		\hline\hline
+		No. & Location & Before Correction                                      & After Correction                               & Explanation                                                          \\hline
+		10  & Page 262 & Code snippet                                           & Removed                                        & Appears to be redundant with previous text, likely a version issue \ 
+		\hline
+		11  & Page 100 & (i.e., the depth from this point to the imaging plane) & The depth from this point to the camera center & More accurate terminology \ \hline                                   
+		12  & Page 100 & Footnote: If it bends inward,... If it bends outward   & Reordered, with outward bending first          & Misleading description \ \hline                                      
+		\hline \hline
+	\end{tabular}
+\end{table}
+
+\section{Additional Changes Not Included in the Errata}
+In addition to the above corrections, there are some changes not included in the book text, which need to be explained to readers. Most of these errata come from GitHub issues. They have been fixed in the code, but the book text may lag behind the speed of updates on GitHub.
+
+\begin{enumerate}
+	\item In the example of SE3 construction in Lecture 4, quaternion should be in the order of $w,x,y,z$.
+	\item In the orb_self.cpp example in Lecture 7, line 375 should be changed to int idx_pq = i * 32 + k;
+	\item In the orb_self.cpp example in Lecture 7, lines 360 and 361, m01 and m10 should be swapped.
+	\item For the implementation of direct method in Lecture 8, cv::parallel_for_function supported by OpenCV 4 is required. If readers are using older versions, some modifications need to be made to the code. Please refer to the corresponding version of OpenCV documentation or refer to~\url{https://github.com/gaoxiang12/slambook2/issues/32}.
+\end{enumerate}
+
+\end{document}
+© C. Albert Thompson 2016 | This page was made possible by CMH and latexindent.pl
