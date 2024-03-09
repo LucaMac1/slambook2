@@ -1,22 +1,22 @@
-# 声明要求的 cmake 最低版本
-cmake_minimum_required(VERSION 2.8)
+# Declare the required cmake minimum version
+cmake_minimum_required(VERSION 3.13)
 
-# 声明一个 cmake 工程
+# Declare a cmake project
 project(HelloSLAM)
 
-# 设置编译模式
+# Set the build mode
 set(CMAKE_BUILD_TYPE "Debug")
 
-# 添加一个可执行程序
-# 语法：add_executable( 程序名 源代码文件 ）
+# Add an executable
+# Syntax: add_executable(executable_name source_file)
 add_executable(helloSLAM helloSLAM.cpp)
 
-# 添加hello库
+# Add the hello library
 add_library(hello libHelloSLAM.cpp)
-# 共享库
+# Shared library
 add_library(hello_shared SHARED libHelloSLAM.cpp)
 
-# 添加可执行程序调用hello库中函数
+# Add an executable that uses functions from the hello library
 add_executable(useHello useHello.cpp)
-# 将库文件链接到可执行程序上
+# Link the library to the executable
 target_link_libraries(useHello hello_shared)
