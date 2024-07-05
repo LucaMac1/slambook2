@@ -1,9 +1,6 @@
 [submodule "3rdparty/Pangolin"]
 	path = 3rdparty/Pangolin
 	url = https://github.com/stevenlovegrove/Pangolin
-[submodule "3rdparty/Sophus"]
-	path = 3rdparty/Sophus
-	url = https://github.com/strasdat/Sophus
 [submodule "3rdparty/ceres-solver"]
 	path = 3rdparty/ceres-solver
 	url = https://github.com/ceres-solver/ceres-solver
