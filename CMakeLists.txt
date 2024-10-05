@@ -19,23 +19,23 @@ if (BUILD_THIRDPARTY)
     ExternalProject_Add(Sophus
         SOURCE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/Sophus
     )
-    
+
     ExternalProject_Add(Pangolin
         SOURCE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/Pangolin
     )
-    
+
     ExternalProject_Add(Ceres
         SOURCE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/ceres-solver
     )
-    
+
     ExternalProject_Add(DBoW3
         SOURCE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/DBoW3
     )
-    
+
     ExternalProject_Add(g2o
         SOURCE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/g2o
     )
-    
+
     ExternalProject_Add(googletest
         SOURCE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/googletest
     )

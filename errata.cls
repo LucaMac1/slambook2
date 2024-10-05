@@ -5,7 +5,7 @@
 
 % --- Class structure: identification part
 \ProvidesClass{elegantpaper}[2019/04/01 v0.07 ElegantLaTeX Paper class]
-\NeedsTeXFormat{LaTeX2e} 
+\NeedsTeXFormat{LaTeX2e}
 
 \RequirePackage{kvoptions}
 \RequirePackage{ifthen}
@@ -50,8 +50,8 @@
 
 \graphicspath{{image/}{figure/}{fig/}{img/}}
 
-% caption settings 
-\RequirePackage[font=small,labelfont={bf}]{caption} 
+% caption settings
+\RequirePackage[font=small,labelfont={bf}]{caption}
 \captionsetup[table]{skip=3pt}
 \captionsetup[figure]{skip=3pt}
 
@@ -60,7 +60,7 @@
 \setlist{nolistsep}
 
 
-% define the hyperref color 
+% define the hyperref color
 \RequirePackage{xcolor}
 \definecolor{winered}{rgb}{0.5,0,0}
 
@@ -95,7 +95,7 @@
 
 % \setlength{\voffset}{-0.75in}
 \setlength{\headsep}{5pt}
-% add the \email cmd 
+% add the \email cmd
 \newcommand\email[1]{\href{mailto:#1}{\nolinkurl{#1}}}
 
 \PassOptionsToPackage{no-math}{fontspec}
@@ -238,7 +238,7 @@
       \end{tabular}\par}%
 \vskip 1em%
 \IfEmpty\version
-\else 
+\else
 {\small\normalfont\ifdefstring{\ELEGANT@lang}{en}{\itshape}{\kaishu}\versiontext\the\version}
 \fi
 \ifx\@date\empty
@@ -249,7 +249,7 @@
   \end{center}%
   \par
 }
-  
+
 
 
 
@@ -277,7 +277,7 @@
 
 
 
-\RequirePackage{listings} 
+\RequirePackage{listings}
 \renewcommand{\ttdefault}{cmtt}
 \lstdefinestyle{mystyle}{
   basicstyle=%
@@ -302,7 +302,3 @@
 	tabsize=2,
 	backgroundcolor=\color{lightgrey}
 }
-
-
-
-
