@@ -40,3 +40,7 @@ if (BUILD_THIRDPARTY)
         SOURCE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/googletest
     )
 endif()
+
+# Add subdirectories for chapters
+add_subdirectory(ch2)
+add_subdirectory(ch3)

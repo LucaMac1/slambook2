@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build chapter 2",
+        "type": "shell",
+        "command": "./scripts/build.sh",
+        "args": ["ch2"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build chapter 2"
+      },
+      {
+        "label": "build chapter 3",
+        "type": "shell",
+        "command": "./scripts/build.sh",
+        "args": ["ch3"],
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build chapter 3"
+      }
+      // Add more build tasks for other chapters...
+    ]
+  }

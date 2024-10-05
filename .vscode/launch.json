@@ -1,0 +1,72 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Ch2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch2/helloSLAM",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch2",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build chapter 2",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Launch Ch3 eigenMatrix",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch3/useEigen/eigenMatrix",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch3/useEigen",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build chapter 3",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Launch Ch3 useGeometry",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch3/useGeometry/eigenGeometry",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch3/useGeometry",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build chapter 3",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+        // Add more configurations for other chapters...
+    ]
+}
