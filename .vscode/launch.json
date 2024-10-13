@@ -66,6 +66,72 @@
             ],
             "preLaunchTask": "build chapter 3",
             "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Launch Ch3 visualiseGeometry",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch3/visualizeGeometry/visualizeGeometry",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch3/visualizeGeometry",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build chapter 3",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Launch Ch3 coordinateTransform",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch3/examples/coordinateTransform",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch3/examples",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build chapter 3",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Launch Ch3 plotTrajectory",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch3/examples/plotTrajectory",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch3/examples",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build chapter 3",
+            "internalConsoleOptions": "openOnSessionStart"
         }
         // Add more configurations for other chapters...
     ]

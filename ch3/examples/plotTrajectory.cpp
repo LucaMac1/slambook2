@@ -1,6 +1,8 @@
 #include <pangolin/pangolin.h>
 #include <Eigen/Core>
 #include <unistd.h>
+#include <cstdlib>
+#include <filesystem>
 
 // 本例演示了如何画出一个预先存储的轨迹
 
@@ -8,11 +10,26 @@ using namespace std;
 using namespace Eigen;
 
 // path to trajectory file
-string trajectory_file = "./examples/trajectory.txt";
+// string trajectory_file = "./examples/trajectory.txt";
+// std::string trajectory_file = "trajectory.txt";
 
 void DrawTrajectory(vector<Isometry3d, Eigen::aligned_allocator<Isometry3d>>);
 
 int main(int argc, char **argv) {
+
+    // Print the current working directory
+    std::cout << "Current working directory: " << std::filesystem::current_path() << std::endl;
+
+    // Path to the trajectory file
+    std::string trajectory_file{"trajectory.txt"};
+
+    // Attempt to open the file to see if it can be accessed
+    std::ifstream file(trajectory_file);
+    if (!file) {
+        std::cerr << "Error: Unable to open " << trajectory_file << std::endl;
+    } else {
+        std::cout << "Successfully opened " << trajectory_file << std::endl;
+    }
 
   vector<Isometry3d, Eigen::aligned_allocator<Isometry3d>> poses;
   ifstream fin(trajectory_file);

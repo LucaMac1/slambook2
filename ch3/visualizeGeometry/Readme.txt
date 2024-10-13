@@ -1,34 +1,43 @@
-1. How to compile this program:
+# VisualizeGeometry
 
-* use pangolin: slambook/3rdpart/Pangolin or download it from github: https://github.com/stevenlovegrove/Pangolin
+This project demonstrates the use of Pangolin for 3D visualisation, specifically to display different representations of the transformation between the camera and the world (`T_w_c`). The UI provides a real-time visualisation of rotation matrices, translation vectors, Euler angles, and quaternions.
 
-* install dependency for pangolin (mainly the OpenGL):
-sudo apt-get install libglew-dev
+## Requirements
 
-* compile and install pangolin
-cd [path-to-pangolin]
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-ldconfig
+- **Pangolin** (for visualisation)
+- **Eigen3** (for linear algebra)
+- **GLEW** (for OpenGL extensions)
 
-* compile this program:
-mkdir build
-cd build
-cmake ..
-make
+## Installation
 
-* run the build/visualizeGeometry
+### Step 1: Install Dependencies
+Before compiling Pangolin, install the required dependencies:
 
-2. How to use this program:
+```bash
+sudo apt-get update
+sudo apt-get install libglew-dev cmake build-essential
 
-The UI in the left panel displays different representations of T_w_c ( camera to world ). It shows the rotation matrix, tranlsation vector, euler angles (in roll-pitch-yaw order) and the quaternion.
-Drag your left mouse button to move the camera, right button to rotate it around the box, center button to rotate the camera itself, and press both left and right button to roll the view.
-Note that in this program the original X axis is right (red line), Y is up (green line) and Z in back axis (blue line). You (camera) are looking at (0,0,0) standing on (3,3,3) at first.
+## Usage Instructions
 
-3. Problems may happen:
-* I found that in virtual machines there may be an error in pangolin, which was solved in its issue: https://github.com/stevenlovegrove/Pangolin/issues/74 . You need to comment the two lines mentioned by paulinus, and the recompile and reinstall Pangolin, if you happen to find this problem.
+### UI Panel
+Displays different representations of the camera-to-world transformation (`T_w_c`), including:
 
-If you still have problems using this program, please contact: gaoxiang12@mails.tsinghua.edu.cn
+- **Rotation Matrix**
+- **Translation Vector**
+- **Euler Angles** (Roll-Pitch-Yaw order)
+- **Quaternion**
+
+### Mouse Controls
+
+- **Left Button**: Move the camera.
+- **Right Button**: Rotate around the object.
+- **Middle Button**: Rotate the camera itself.
+- **Left + Right Button**: Roll the view.
+
+### Coordinate System
+
+- **X-axis**: Right (Red line)
+- **Y-axis**: Up (Green line)
+- **Z-axis**: Back (Blue line)
+
+At the start, the camera is positioned at `(3,3,3)` and looks at the origin `(0,0,0)`.
