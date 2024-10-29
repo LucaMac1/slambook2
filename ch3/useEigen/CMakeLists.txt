@@ -1,9 +1,11 @@
-# cmake_minimum_required(VERSION 2.8)
-# project(useEigen)
+cmake_minimum_required(VERSION 3.28)
+project(useEigen)
 
-set(CMAKE_BUILD_TYPE "Release")
-set(CMAKE_CXX_FLAGS "-O3")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 添加Eigen头文件
-add_executable(eigenMatrix eigenMatrix.cpp)
-target_include_directories(eigenMatrix PRIVATE "/usr/include/eigen3")
+set(TARGET eigenMatrix)
+set(SOURCES eigenMatrix.cpp)
+
+add_executable(${TARGET} ${SOURCES})
+target_include_directories(${TARGET} PUBLIC Eigen3::Eigen)

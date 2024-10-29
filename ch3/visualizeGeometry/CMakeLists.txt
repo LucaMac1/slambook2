@@ -1,5 +1,11 @@
+cmake_minimum_required(VERSION 3.28)
 project(visualizeGeometry)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 set(TARGET visualizeGeometry)
+set(SOURCES visualizeGeometry.cpp)
 
 # Set policy to avoid compatibility warning
 if(COMMAND cmake_policy)
@@ -10,6 +16,6 @@ endif(COMMAND cmake_policy)
 find_package(Pangolin REQUIRED)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
-add_executable(${TARGET} visualizeGeometry.cpp)
+add_executable(${TARGET} ${SOURCES})
 target_include_directories(${TARGET} PUBLIC Eigen3::Eigen ${Pangolin_INCLUDE_DIRS})
 target_link_libraries(${TARGET} PRIVATE ${Pangolin_LIBRARIES})

@@ -20,8 +20,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build chapter 2",
-            "internalConsoleOptions": "openOnSessionStart"
+            "preLaunchTask": "build ch2"
         },
         {
             "name": "Launch Ch3 eigenMatrix",
@@ -42,8 +41,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build chapter 3",
-            "internalConsoleOptions": "openOnSessionStart"
+            "preLaunchTask": "build ch3 useEigen"
         },
         {
             "name": "Launch Ch3 useGeometry",
@@ -64,11 +62,10 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build chapter 3",
-            "internalConsoleOptions": "openOnSessionStart"
+            "preLaunchTask": "build ch3 useGeometry"
         },
         {
-            "name": "Launch Ch3 visualiseGeometry",
+            "name": "Launch Ch3 visualizeGeometry",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/ch3/visualizeGeometry/visualizeGeometry",
@@ -86,8 +83,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build chapter 3",
-            "internalConsoleOptions": "openOnSessionStart"
+            "preLaunchTask": "build ch3 visualizeGeometry"
         },
         {
             "name": "Launch Ch3 coordinateTransform",
@@ -108,8 +104,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build chapter 3",
-            "internalConsoleOptions": "openOnSessionStart"
+            "preLaunchTask": "build ch3 examples"
         },
         {
             "name": "Launch Ch3 plotTrajectory",
@@ -130,9 +125,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build chapter 3",
-            "internalConsoleOptions": "openOnSessionStart"
+            "preLaunchTask": "build ch3 examples"
         }
-        // Add more configurations for other chapters...
     ]
 }

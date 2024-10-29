@@ -1,9 +1,6 @@
-# cmake_minimum_required(VERSION 2.8)
-# project(chapter3)
+cmake_minimum_required(VERSION 3.28)
+project(Chapter3)
 
-# set(CMAKE_CXX_FLAGS "-std=c++11")
-
-# 加入各子工程
 add_subdirectory(useEigen)
 add_subdirectory(useGeometry)
 add_subdirectory(visualizeGeometry)

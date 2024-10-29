@@ -1,7 +1,11 @@
-# cmake_minimum_required( VERSION 2.8 )
-# project( geometry )
+cmake_minimum_required(VERSION 3.28)
+project(useGeometry)
 
-# 添加Eigen头文件
-include_directories( "/usr/include/eigen3" )
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(eigenGeometry eigenGeometry.cpp)
+set(TARGET eigenGeometry)
+set(SOURCES eigenGeometry.cpp)
+
+add_executable(${TARGET} ${SOURCES})
+target_include_directories(${TARGET} PUBLIC Eigen3::Eigen)

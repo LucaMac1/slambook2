@@ -1,13 +1,6 @@
 cmake_minimum_required(VERSION 3.28)
 project(SlamProject2)
 
-# Define global settings or options here if needed
-# set(CMAKE_CXX_STANDARD 17)
-# set(CMAKE_CXX_STANDARD_REQUIRED True)
-
-# Optionally set other global options
-# set(CMAKE_BUILD_TYPE Release)
-
 # Use ExternalProject to manage third-party libraries
 include(ExternalProject)
 
