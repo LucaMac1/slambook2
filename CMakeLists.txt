@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.28)
 project(SlamProject2)
 
 # Define global settings or options here if needed
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# set(CMAKE_CXX_STANDARD 17)
+# set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Optionally set other global options
 # set(CMAKE_BUILD_TYPE Release)
@@ -40,7 +40,3 @@ if (BUILD_THIRDPARTY)
         SOURCE_DIR ${CMAKE_SOURCE_DIR}/3rdparty/googletest
     )
 endif()
-
-# Add subdirectories for chapters
-add_subdirectory(ch2)
-add_subdirectory(ch3)
