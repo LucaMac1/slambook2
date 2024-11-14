@@ -169,5 +169,89 @@
             ],
             "preLaunchTask": "build ch4 trajectoryError"
         },
+        {
+            "name": "Launch Ch5 imageBasics",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch5/imageBasics/imageBasics",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch5/imageBasics",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build ch5 imageBasics"
+        },
+        {
+            "name": "Launch Ch5 undistortImage",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch5/imageBasics/undistortImage",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch5/imageBasics",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build ch5 imageBasics"
+        },
+        {
+            "name": "Launch Ch5 RGBD",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch5/rgbd/joinMap",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch5/rgbd",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build ch5 rgbd"
+        },
+        {
+            "name": "Launch Ch5 stereo",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch5/stereo/stereoVision",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch5/stereo",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build ch5 stereo"
+        },
     ]
 }
