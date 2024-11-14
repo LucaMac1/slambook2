@@ -60,6 +60,30 @@
           },
           "problemMatcher": ["$gcc"],
           "detail": "Build Chapter 3 - examples"
-      }
+      },
+      {
+        "label": "build ch4",
+        "type": "shell",
+        "command": "./scripts/build.sh",
+        "args": ["ch4"],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build Chapter 4"
+    },
+    {
+        "label": "build ch4 trajectoryError",
+        "type": "shell",
+        "command": "./scripts/build.sh",
+        "args": ["ch4", "examples"],
+        "group": {
+            "kind": "build",
+            "isDefault": false
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build Chapter 4 - examples"
+    },
   ]
 }
