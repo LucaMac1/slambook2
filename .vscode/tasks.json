@@ -121,5 +121,17 @@
         "problemMatcher": ["$gcc"],
         "detail": "Build Chapter 5 - stereo"
     },
+    {
+        "label": "build ch6",
+        "type": "shell",
+        "command": "./scripts/build.sh",
+        "args": ["ch6"],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build Chapter 6"
+    },
   ]
 }

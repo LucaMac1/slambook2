@@ -253,5 +253,47 @@
             ],
             "preLaunchTask": "build ch5 stereo"
         },
+        {
+            "name": "Ch6 gaussNewton",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch6/gaussNewton",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch6",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build ch6"
+        },
+        {
+            "name": "Ch6 ceresCurveFitting",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ch6/ceresCurveFitting",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/ch6",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build ch6"
+        },
     ]
 }
