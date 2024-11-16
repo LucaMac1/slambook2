@@ -10,6 +10,7 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+
 find_package(OpenCV REQUIRED)
 find_package(Ceres REQUIRED)
 find_package(G2O REQUIRED)

@@ -11,18 +11,17 @@ add_executable(stereoVision stereoVision.cpp)
 target_include_directories(stereoVision PUBLIC ${OpenCV_INCLUDE_DIRS} Eigen3::Eigen)
 target_link_libraries(stereoVision PRIVATE ${OpenCV_LIBS} ${Pangolin_LIBRARIES})
 
-
 # Define the source directory containing .png files
-set(SOURCE_DEPTH_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
+set(SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 
 # Define the target directory where the files will be copied
-set(TARGET_DEPTH_DIR "${CMAKE_CURRENT_BINARY_DIR}")
+set(TARGET_DIR "${CMAKE_CURRENT_BINARY_DIR}")
 
 # Create the target directory if it does not exist
-file(MAKE_DIRECTORY "${TARGET_DEPTH_DIR}")
+file(MAKE_DIRECTORY "${TARGET_DIR}")
 
 # Get all .pgm files in the source directory
-file(GLOB PNG_FILES "${SOURCE_DEPTH_DIR}/*.png")
+file(GLOB PNG_FILES "${SOURCE_DIR}/*.png")
 
 # Iterate over each .png file and configure it
 foreach(PNG_FILE ${PNG_FILES})
@@ -32,7 +31,7 @@ foreach(PNG_FILE ${PNG_FILES})
     # Copy the file to the target directory
     configure_file(
         ${PNG_FILE}
-        ${TARGET_DEPTH_DIR}/${FILENAME}
+        ${TARGET_DIR}/${FILENAME}
         COPYONLY
     )
 endforeach()
