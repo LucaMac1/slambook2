@@ -1,173 +1,253 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-      {
-          "label": "build ch2",
-          "type": "shell",
-          "command": "./scripts/build.sh",
-          "args": ["ch2"],
-          "group": {
-              "kind": "build",
-              "isDefault": true
-          },
-          "problemMatcher": ["$gcc"],
-          "detail": "Build Chapter 2"
-      },
-      {
-          "label": "build ch3 useEigen",
-          "type": "shell",
-          "command": "./scripts/build.sh",
-          "args": ["ch3", "useEigen"],
-          "group": {
-              "kind": "build",
-              "isDefault": false
-          },
-          "problemMatcher": ["$gcc"],
-          "detail": "Build Chapter 3 - useEigen"
-      },
-      {
-          "label": "build ch3 useGeometry",
-          "type": "shell",
-          "command": "./scripts/build.sh",
-          "args": ["ch3", "useGeometry"],
-          "group": {
-              "kind": "build",
-              "isDefault": false
-          },
-          "problemMatcher": ["$gcc"],
-          "detail": "Build Chapter 3 - useGeometry"
-      },
-      {
-          "label": "build ch3 visualizeGeometry",
-          "type": "shell",
-          "command": "./scripts/build.sh",
-          "args": ["ch3", "visualizeGeometry"],
-          "group": {
-              "kind": "build",
-              "isDefault": false
-          },
-          "problemMatcher": ["$gcc"],
-          "detail": "Build Chapter 3 - visualizeGeometry"
-      },
-      {
-          "label": "build ch3 examples",
-          "type": "shell",
-          "command": "./scripts/build.sh",
-          "args": ["ch3", "examples"],
-          "group": {
-              "kind": "build",
-              "isDefault": false
-          },
-          "problemMatcher": ["$gcc"],
-          "detail": "Build Chapter 3 - examples"
-      },
-      {
-        "label": "build ch4",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch4"],
-        "group": {
-            "kind": "build",
-            "isDefault": true
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build ch2",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch2"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 2"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 4"
-    },
-    {
-        "label": "build ch4 trajectoryError",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch4", "examples"],
-        "group": {
-            "kind": "build",
-            "isDefault": false
+        {
+            "label": "build ch3 useEigen",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch3",
+                "useEigen"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 3 - useEigen"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 4 - examples"
-    },
-    {
-        "label": "build ch5 imageBasics",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch5", "imageBasics"],
-        "group": {
-            "kind": "build",
-            "isDefault": false
+        {
+            "label": "build ch3 useGeometry",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch3",
+                "useGeometry"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 3 - useGeometry"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 5 - imageBasics"
-    },
-    {
-        "label": "build ch5 rgbd",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch5", "rgbd"],
-        "group": {
-            "kind": "build",
-            "isDefault": false
+        {
+            "label": "build ch3 visualizeGeometry",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch3",
+                "visualizeGeometry"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 3 - visualizeGeometry"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 5 - rgbd"
-    },
-    {
-        "label": "build ch5 stereo",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch5", "stereo"],
-        "group": {
-            "kind": "build",
-            "isDefault": false
+        {
+            "label": "build ch3 examples",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch3",
+                "examples"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 3 - examples"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 5 - stereo"
-    },
-    {
-        "label": "build ch6",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch6"],
-        "group": {
-            "kind": "build",
-            "isDefault": true
+        {
+            "label": "build ch4",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch4"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 4"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 6"
-    },
-    {
-        "label": "build ch7",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch7"],
-        "group": {
-            "kind": "build",
-            "isDefault": true
+        {
+            "label": "build ch4 trajectoryError",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch4",
+                "examples"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 4 - examples"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 7"
-    },
-    {
-        "label": "build ch8",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch8"],
-        "group": {
-            "kind": "build",
-            "isDefault": true
+        {
+            "label": "build ch5 imageBasics",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch5",
+                "imageBasics"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 5 - imageBasics"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 8"
-    },
-    {
-        "label": "build ch9",
-        "type": "shell",
-        "command": "./scripts/build.sh",
-        "args": ["ch9"],
-        "group": {
-            "kind": "build",
-            "isDefault": true
+        {
+            "label": "build ch5 rgbd",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch5",
+                "rgbd"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 5 - rgbd"
         },
-        "problemMatcher": ["$gcc"],
-        "detail": "Build Chapter 9"
-    },
-  ]
+        {
+            "label": "build ch5 stereo",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch5",
+                "stereo"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 5 - stereo"
+        },
+        {
+            "label": "build ch6",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch6"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 6"
+        },
+        {
+            "label": "build ch7",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch7"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 7"
+        },
+        {
+            "label": "build ch8",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch8"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 8"
+        },
+        {
+            "label": "build ch10",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch9"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 9"
+        },
+        {
+            "label": "build ch10",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch10"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 10"
+        },
+    ]
 }
