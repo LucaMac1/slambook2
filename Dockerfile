@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     gfortran \
+    g++ \
+    gdb \
     bash \
     libopenblas-dev \
     libeigen3-dev \
