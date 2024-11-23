@@ -299,5 +299,21 @@
             ],
             "detail": "Build Chapter 12 - dense_RGBD"
         },
+        {
+            "label": "build ch13 - SLAM app",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch13",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 13 - SLAM app"
+        },
     ]
 }
