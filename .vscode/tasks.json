@@ -265,5 +265,39 @@
             ],
             "detail": "Build Chapter 11"
         },
+        {
+            "label": "build ch12 dense_mono",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch12",
+                "dense_mono"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 12 - dense_mono"
+        },
+        {
+            "label": "build ch12 dense_RGBD",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch12",
+                "dense_RGBD"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 12 - dense_RGBD"
+        },
     ]
 }
