@@ -1,0 +1,13 @@
+{
+    "name": "SLAM Dev Environment",
+    "image": "localhost/slam-dev-env:latest",
+    "workspaceFolder": "/workspace",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.remote-containers"
+    ]
+}
