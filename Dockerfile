@@ -1,4 +1,3 @@
-# Use Ubuntu 22.04 as the base image
 FROM ubuntu:22.04
 
 # Set non-interactive frontend to prevent tzdata and other prompts during installation
@@ -32,15 +31,17 @@ RUN apt-get update && apt-get install -y \
     libpcl-dev \
     jq \
     libepoxy-dev \
-    libgl1-mesa-dev && \
+    libgl1-mesa-dev \
+    sudo \
+    libcap2-bin && \
     rm -rf /var/lib/apt/lists/*
 
 # Fetch and install a specific version of CMake (hardcoded)
-RUN curl -fsSL https://github.com/Kitware/CMake/releases/download/v3.24.2/cmake-3.24.2-linux-x86_64.tar.gz -o /tmp/cmake.tar.gz && \
+RUN curl -fsSL https://github.com/Kitware/CMake/releases/download/v3.28.2/cmake-3.28.2-linux-x86_64.tar.gz -o /tmp/cmake.tar.gz && \
     tar -xvzf /tmp/cmake.tar.gz -C /tmp && \
     rm -rf /usr/local/man && \
-    cp -r /tmp/cmake-3.24.2-linux-x86_64/* /usr/local/ && \
-    rm -rf /tmp/cmake.tar.gz /tmp/cmake-3.24.2-linux-x86_64
+    cp -r /tmp/cmake-3.28.2-linux-x86_64/* /usr/local/ && \
+    rm -rf /tmp/cmake.tar.gz /tmp/cmake-3.28.2-linux-x86_64
 
 # Verify CMake installation
 RUN cmake --version
@@ -77,7 +78,7 @@ RUN git clone https://github.com/LucaMac1/DBow3.git /tmp/DBoW3 && \
     make -j$(nproc) && make install && \
     rm -rf /tmp/DBoW3
 
-# Set up GoogleTest (build only the library)
+# Set up GoogleTest
 RUN git clone https://github.com/LucaMac1/googletest.git /tmp/googletest && \
     cd /tmp/googletest && \
     mkdir build && cd build && \
