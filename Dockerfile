@@ -84,10 +84,25 @@ RUN git clone https://github.com/LucaMac1/googletest.git /tmp/googletest && \
     rm -rf /tmp/googletest
 
 # Clean up to reduce image size
-RUN apt-get purge -y build-essential git wget && \
+RUN apt-get purge -y build-essential wget && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+# Install a text editor for Git
+RUN apt-get update && apt-get install -y nano && \
+    git config --global core.editor "nano" && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install pre-commit
+RUN python3 -m pip install --no-cache-dir pre-commit
+
+# Add your project files
+COPY . /workspace
+
+# Set up pre-commit hooks
+RUN cd /workspace && \
+    pre-commit install
 
 # Set the default working directory
 WORKDIR /workspace
