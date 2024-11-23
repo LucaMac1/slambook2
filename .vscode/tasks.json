@@ -157,5 +157,17 @@
         "problemMatcher": ["$gcc"],
         "detail": "Build Chapter 8"
     },
+    {
+        "label": "build ch9",
+        "type": "shell",
+        "command": "./scripts/build.sh",
+        "args": ["ch9"],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build Chapter 9"
+    },
   ]
 }
