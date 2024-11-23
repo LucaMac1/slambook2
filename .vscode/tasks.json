@@ -249,5 +249,21 @@
             ],
             "detail": "Build Chapter 10"
         },
+        {
+            "label": "build ch11",
+            "type": "shell",
+            "command": "./scripts/build.sh",
+            "args": [
+                "ch11"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Chapter 11"
+        },
     ]
 }
