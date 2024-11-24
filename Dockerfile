@@ -86,6 +86,17 @@ RUN git clone https://github.com/LucaMac1/googletest.git /tmp/googletest && \
     make -j$(nproc) && make install && \
     rm -rf /tmp/googletest
 
+# Clone and build CSparse with static libraries and manual install
+RUN git clone --recursive https://github.com/LucaMac1/SuiteSparse.git /tmp/SuiteSparse && \
+    cd /tmp/SuiteSparse/CSparse && \
+    mkdir -p build && cd build && \
+    cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_STATIC_LIBS=ON && \
+    make -j$(nproc) && \
+    mkdir -p /usr/local/lib /usr/local/include && \
+    cp libcsparse.a /usr/local/lib/ && \
+    cp ../Include/cs.h /usr/local/include/ && \
+    rm -rf /tmp/SuiteSparse
+
 # Clean up to reduce image size
 RUN apt-get purge -y build-essential wget && \
     apt-get autoremove -y && \
